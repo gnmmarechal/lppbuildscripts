@@ -9,6 +9,6 @@ read title
 echo -n "Insert homebrew title ID (4 characters): "
 read titleID
 
-./vita-mksfoex -s TITLE_ID=${titleid^^}00001 "${title}" param.sfo
+./vita-mksfoex -s TITLE_ID=${titleID^^}00001 "${title}" param.sfo
 yes | cp -rf param.sfo build/sce_sys/param.sfo
 7z a -tzip "${title}.vpk" -r ./build/* ./build/eboot.bin 
